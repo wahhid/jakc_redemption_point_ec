@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<openerp>
+    <data>
+        
+        <!-- RDM/POINT SCHEMAS -->		
+        <record model="ir.ui.view" id="view_rdm_point_schemas_form">
+            <field name="name">rdm.point.schemas.form</field>
+            <field name="model">rdm.point.schemas</field>						
+            <field name="type">form</field>						
+            <field name="arch" type="xml">
+                <form string="Point Schemas">  
+                    <group>                            
+                        <field name="name"/>                            
+                        <field name="spend_amount"/>
+                        <field name="point"/>                            
+                        <field name="start_date"/>                            
+                        <field name="end_date"/>                            
+                        <field name="multiple"/>
+                        <field name="limit_point"/>
+                        <field name="state"/>                                                                                    
+                    </group>
+                </form>
+            </field>
+        </record>
+		
+        <record model="ir.ui.view" id="view_rdm_point_schemas_tree">
+            <field name="name">rdm.point.schemas.tree</field>
+            <field name="model">rdm.point.schemas</field>			
+            <field name="type">tree</field>						
+            <field name="arch" type="xml">
+                <tree string="Point Schemas">
+                    <field name="name"/>
+                    <field name="spend_amount"/>                            
+                    <field name="point"/>                            
+                    <field name="start_date"/>                            		
+                    <field name="start_date"/>                            		
+                    <field name="multiple"/>
+                    <field name="limit_point"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+                                        
+        <!-- RDM/ACTION -->
+        <!-- POINT SCHEMAS -->
+	<record model="ir.actions.act_window" id="action_rdm_point_schemas">
+            <field name="name">Point Schemas</field>
+            <field name="res_model">rdm.point.schemas</field>
+            <field name="view_mode">tree,form</field>
+        </record>		
+                        
+    </data>
+</openerp>    

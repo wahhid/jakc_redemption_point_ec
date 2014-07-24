@@ -1,0 +1,3 @@
+import jakc_redemption_point
+import jakc_redemption_point_trans
+import jakc_redemption_customer

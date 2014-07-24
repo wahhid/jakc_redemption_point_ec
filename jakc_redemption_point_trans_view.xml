@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<openerp>
+    <data>
+        <!-- RDM/POINT TRANS -->		
+        <record model="ir.ui.view" id="view_rdm_point_trans_form">
+            <field name="name">rdm.point.trans.form</field>
+            <field name="model">rdm.point.trans</field>						
+            <field name="type">form</field>						
+            <field name="arch" type="xml">
+                <form string="Point Transaction">  
+                    <group>                            
+                        <field name="trans_date"/>                            
+                        <field name="customer_id"/>
+                        <field name="reward_id"/>                            
+                        <field name="quantity"/>                            
+                        <field name="total_point"/>                            
+                    </group>
+                </form>
+            </field>
+        </record>
+		
+        <record model="ir.ui.view" id="view_rdm_point_trans_tree">
+            <field name="name">rdm.point.trans.tree</field>
+            <field name="model">rdm.point.trans</field>			
+            <field name="type">tree</field>						
+            <field name="arch" type="xml">
+                <tree string="Point Transaction">
+                    <field name="trans_date"/>                            
+                    <field name="customer_id"/>
+                    <field name="reward_id"/>                            
+                    <field name="quantity"/>                            
+                    <field name="total_point"/>      
+                </tree>
+            </field>
+        </record>
+        
+        <!-- RDM/ACTION -->
+        <!-- POINT TRANS -->
+	<record model="ir.actions.act_window" id="action_rdm_point_trans">
+            <field name="name">Point Transaction</field>
+            <field name="res_model">rdm.point.trans</field>
+            <field name="view_mode">tree,form</field>
+        </record>	        
+    </data>
+</openerp>
